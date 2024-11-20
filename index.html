@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css~">
+</head>
+<body>
+    <h1>1. Single threading va Multi threading</h1><br>
+
+<h4>Single Threading
+    Single threading — bu dasturda faqat bitta oqim (thread) ishlaydigan model. Bu shuni anglatadiki, barcha vazifalar ketma-ket (sekvential) bajariladi. Agar bir vazifa uzoq vaqt talab qilsa, dastur boshqa vazifalarni bajarishni kutadi.
+    Misol: JavaScript single-threaded bo'lib, asosiy oqimi (main thread) orqali vazifalarni bajaradi.
+    Multi Threading
+    Multi threading — bu dastur bir vaqtning o'zida bir nechta oqimlar (threads) orqali bir nechta vazifalarni bajaradigan model. Bu, ayniqsa, katta hajmdagi hisoblashlarni yoki kirish/chiqish (I/O) jarayonlarini samarali bajarish uchun foydalidir.
+    Misol: Java yoki Python'dagi threading kutubxonalari multi-threading imkoniyatlarini beradi.
+
+    Single threading ketma-ket bajarishni talab qiladi, multi threading esa bir vaqtning o'zida bir nechta vazifalarni bajarishga imkon beradi.
+Multi threading ko'p yadroli protsessorlardan samarali foydalanadi, single threading esa odatda oddiyroq dasturlar uchun mos.
+
+    </h4><br><br>
+
+<h1>2. Synxron va Asynxron dasturlash</h1>
+
+<p>Synxron dasturlash
+    Synxron dasturlashda vazifalar ketma-ket bajariladi. Bir vazifa tugamasdan, keyingisi boshlanmaydi. Masalan, agar bir vazifa uzoq davom etsa, boshqa vazifalar kutish rejimida qoladi. Asynxron dasturlash
+    Asynxron dasturlashda bir vazifa kutish holatida bo'lsa ham, boshqa vazifalar bajarilaveradi. Bu ko'p vaqt talab qiladigan operatsiyalar (masalan, tarmoq so'rovlari yoki fayl o'qish) uchun samarali. Synxron dasturlashda kod ketma-ket bajariladi, asynxron dasturlash esa kutish vaqtlarini boshqarish orqali samaradorlikni oshiradi.
+    Synxron dastur sekinroq ishlashi mumkin, asynxron esa resurslardan samarali foydalanadi.
+    </p><br><br>
+
+    <h1>3. JavaScript Event Loop nima?
+    </h1>
+
+    <p>Event Loop — JavaScript’ning asynxron xatti-harakatlarini boshqaruvchi mexanizm. U vazifalarni ketma-ket va to'g'ri tartibda bajarilishini ta'minlaydi. JavaScript single-threaded bo'lsa-da, Event Loop yordamida bir vaqtning o'zida ko'plab vazifalarni boshqara oladi.
+
+        Ishlash prinsipi:
+        
+        Call Stack — Asosiy bajariladigan kodlar joylashtiriladi (masalan, funksiya chaqirilishi).
+        Web API — Asynxron operatsiyalarni (timer, HTTP so'rovlari) bajaradi.
+        Callback Queue — Vazifalar tugagandan so'ng, ularning callback funksiyalari bu yerga tushadi.
+        Event Loop — Call Stack bo'sh bo'lsa, Callback Queue’dagi funksiyalarni Call Stack'ga o'tkazadi.</p><br><br>
+
+        <h1>JavaScript haqida umumiy ma'lumot
+        </h1>
+
+<p>
+    JavaScript haqida umumiy ma'lumot
+    JavaScript — bu dinamik, obyektga yo'naltirilgan va interpretatsiyalanuvchi dasturlash tili bo'lib, asosan veb-sahifalarning interaktivligini oshirish uchun ishlatiladi. JavaScript veb-dasturlashda HTML va CSS bilan birgalikda ishlatiladi va zamonaviy dasturiy ta'minot ishlab chiqishda muhim rol o'ynaydi.
+    
+    JavaScript'ning asosiy xususiyatlari:
+    Dinamik til
+    JavaScript o'zgaruvchilarni e'lon qilishda turini aniqlashni talab qilmaydi. O'zgaruvchining turi uni ishlatish davomida o'zgarishi mumkin.
+    
+    Misol:
+    
+    javascript
+    Copy code
+    let x = 42; // Raqam
+    x = "Salom"; // Matn
+    Platformadan mustaqil
+    JavaScript har qanday platformada ishlaydi, chunki u brauzer orqali ishlaydi. Bu esa uni keng qo'llanadigan dasturlash tili qiladi.
+    
+    Single-threaded va Asynxronlik qo'llab-quvvatlashi
+    JavaScript bir oqimda ishlaydi (single-threaded), ammo asynxron dasturlash imkoniyatlari orqali samaradorlikni oshiradi. Callback, Promises, va async/await bu jarayonlarni boshqarishda yordam beradi.
+    
+    Event-driven (voqealar asosidagi dasturlash)
+    JavaScript asosan voqealar asosida ishlaydi. Masalan, foydalanuvchi tugmani bosganda yoki sahifa yuklanganda kodni ishga tushiradi.
+    
+    Obyektga yo'naltirilgan dasturlash (OOP)
+    JavaScript'da sinflar (classes) va obyektlar orqali OOP tamoyillari amalga oshiriladi.
+    
+    Misol:</p>
+    <br><br>
+    <p>Kuchli kutubxonalar va ramkalar
+        JavaScript ekotizimi boy va kuchli. Masalan:
+        
+        Frontend: React.js, Angular, Vue.js
+        Backend: Node.js
+        Ma'lumotlar bilan ishlash: D3.js, Chart.js
+        Testlash: Jest, Mocha
+        JavaScript ishlatiladigan sohalar:
+        Frontend dasturlash:
+        Veb-sahifalarga interaktivlik qo'shish (animatsiyalar, tugmalar, menyular).
+        Misol:
+        
+        javascript
+        Copy code
+        document.getElementById("btn").addEventListener("click", () => {
+            alert("Tugma bosildi!");
+        });
+        Backend dasturlash:
+        JavaScript yordamida server tomon dasturlar yaratish (Node.js).
+        
+        Mobil ilovalar yaratish:
+        React Native va Flutter orqali JavaScript yordamida mobil ilovalar ishlab chiqish.
+        
+        Desktop ilovalar:
+        Electron.js orqali kross-platformali dasturlar yaratish.
+        
+        O'yin dasturlash:
+        O'yin dvigatellari va JavaScript kutubxonalari yordamida brauzer o'yinlari ishlab chiqish.
+        
+        JavaScript'ning asosiy tushunchalari:
+        O'zgaruvchilar:
+        var, let, va const yordamida e'lon qilinadi.
+        
+        javascript
+        Copy code
+        let yosh = 25;  
+        const ism = "Jasur";  
+        Funksiyalar:
+        Oddiy va arrow funksiyalar:
+        
+        javascript
+        Copy code
+        function salomBer(ism) {
+            return `Salom, ${ism}!`;
+        }
+        const xayrlash = (ism) => `Xayr, ${ism}!`;
+        Massivlar va obyektlar:
+        Ma'lumotlar tuzilmalari.
+        
+        javascript
+        Copy code
+        let mevalar = ["olma", "banan", "uzum"];  
+        let talaba = { ism: "Ali", yosh: 20 };
+        Asynxron dasturlash:
+        Promises va async/await yordamida asynxronlikni boshqarish.
+        
+        javascript
+        Copy code
+        const yuklash = async () => {
+            let natija = await fetch("https://jsonplaceholder.typicode.com/posts");
+            let data = await natija.json();
+            console.log(data);
+        };
+        yuklash();
+        JavaScript o'zining moslashuvchanligi va keng qo'llanilishi tufayli bugungi kunda eng ommabop dasturlash tillaridan biridir.</p>
+
+</body>
+</html>
